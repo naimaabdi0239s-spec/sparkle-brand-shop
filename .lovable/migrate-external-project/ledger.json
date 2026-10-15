@@ -1,0 +1,54 @@
+{
+  "source": "published-site",
+  "capabilities": [
+    {
+      "capability": "homepage",
+      "source": "original published frontend",
+      "outcome": "recreate presentation without layout changes",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "product pages",
+      "source": "original published frontend",
+      "outcome": "recreate presentation without layout changes",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secondary pages",
+      "source": "original published frontend",
+      "outcome": "recreate presentation without layout changes",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "images",
+      "source": "original published frontend",
+      "outcome": "recreate presentation without layout changes",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "navigation",
+      "source": "original published frontend",
+      "outcome": "recreate presentation without layout changes",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "checkout and form delivery",
+      "source": "no configured provider in current project",
+      "outcome": "preserve frontend only; no fabricated transactions",
+      "status": "pending",
+      "next_action": "connect store checkout and email delivery separately"
+    },
+    {
+      "capability": "legal policy review",
+      "source": "uploaded policies plus newly drafted privacy and terms",
+      "outcome": "drafts available; not official Shopify legal templates",
+      "status": "pending",
+      "next_action": "owner/legal review before accepting orders"
+    }
+  ]
+}
