@@ -2,13 +2,72 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ButterSection, OilSection, PairingsSection, StorySection, ReviewsSection, Newsletter } from "@/components/store-sections";
 import { pageHead } from "@/lib/catalog";
 import hero from "@/assets/ag-hero-wide.jpg";
+import { useEffect, useState } from "react";
+
 export const Route = createFileRoute("/")({
-  head: () => pageHead("Meet your new daily ritual", "Hand-whipped body butters and rose-infused body oils, handcrafted by A Gabrielle."),
+  head: () => ({
+    ...pageHead("Meet your new daily ritual", "Hand-whipped body butters and rose-infused body oils, handcrafted by A Gabrielle."),
+    // Preload hero image to improve LCP
+    links: [
+      { rel: "preload", as: "image", href: hero },
+    ],
+  }),
   component: Index,
 });
+
 function Index() {
-  return <main><section className="hero"><img className="hero-image" src={hero} alt="A Gabrielle body oil and whipped body butter, surrounded by sunlit botanicals" fetchPriority="high"/><div className="hero-shade"/><div className="hero-content"><p className="eyebrow">A Gabrielle · A little luxury for your skin</p><h1>Meet your new<br/><em>daily ritual.</em></h1><p>A rich, hand-whipped body butter. A nourishing, rose-infused oil. A moment of care your skin will thank you for.</p><Button asChild className="btn btn-default btn-lg"><Link to="/shop">Shop the products <ArrowRight/></Link></Button></div><div className="hero-caption">Made with care. Made for you.</div></section><ButterSection/><OilSection/><PairingsSection/><StorySection/><ReviewsSection/><Newsletter/></main>;
+  // Dynamically load the below-the-fold sections to reduce initial JS bundle
+  const [Sections, setSections] = useState<any | null>(null);
+
+  useEffect(() => {
+    let mounted = true;
+    import("@/components/store-sections").then((mod) => {
+      if (mounted) setSections(mod);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  return (
+    <main>
+      <section className="hero">
+        <img
+          className="hero-image"
+          src={hero}
+          alt="A Gabrielle body oil and whipped body butter, surrounded by sunlit botanicals"
+          fetchPriority="high"
+        />
+        <div className="hero-content">
+          <h1 className="hero-title">Meet your new daily ritual</h1>
+          <p className="hero-sub">Hand-whipped body butters and rose-infused body oils</p>
+          <div className="hero-actions">
+            <Link to="/products" className="inline-block">
+              <Button>
+                Shop
+                <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Render sections only after dynamic import to keep initial bundle small */}
+      {Sections ? (
+        <>
+          <Sections.ButterSection />
+          <Sections.OilSection />
+          <Sections.PairingsSection />
+          <Sections.StorySection />
+          <Sections.ReviewsSection />
+          <Sections.Newsletter />
+        </>
+      ) : (
+        // lightweight placeholder while sections load
+        <div aria-hidden className="sections-loading" />
+      )}
+    </main>
+  );
 }
