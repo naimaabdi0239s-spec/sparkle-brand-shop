@@ -21,18 +21,31 @@ function Index() {
           alt="A Gabrielle body oil and whipped body butter, surrounded by sunlit botanicals"
           fetchPriority="high"
         />
+
+        <div className="hero-shade" />
+
         <div className="hero-content">
-          <h1 className="hero-title">Meet your new daily ritual</h1>
-          <p className="hero-sub">Hand-whipped body butters and rose-infused body oils, handcrafted by A Gabrielle.</p>
-          <div className="hero-actions">
-            <Link to="/products" className="inline-block">
-              <Button>
-                Shop
-                <ArrowRight className="ml-2" />
-              </Button>
+          <p className="eyebrow">A Gabrielle · A little luxury for your skin</p>
+
+          <h1>
+            Meet your new
+            <br />
+            <em>daily ritual.</em>
+          </h1>
+
+          <p>
+            A rich, hand-whipped body butter. A nourishing, rose-infused oil. A moment
+            of care your skin will thank you for.
+          </p>
+
+          <Button asChild className="btn btn-default btn-lg">
+            <Link to="/shop">
+              Shop the products <ArrowRight />
             </Link>
-          </div>
+          </Button>
         </div>
+
+        <div className="hero-caption">Made with care. Made for you.</div>
       </section>
 
       <ButterSection />
