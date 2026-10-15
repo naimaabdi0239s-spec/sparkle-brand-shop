@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProductInfoRouteImport } from './routes/product-info'
+import { Route as ProductPairingsRouteImport } from './routes/product-pairings'
+import { Route as ReturnsRouteImport } from './routes/returns'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as ShippingRouteImport } from './routes/shipping'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
+import { Route as ShopBodyButtersRouteImport } from './routes/shop_.body-butters'
+import { Route as ShopBodyOilsRouteImport } from './routes/shop_.body-oils'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductInfoRoute = ProductInfoRouteImport.update({
+  id: '/product-info',
+  path: '/product-info',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductPairingsRoute = ProductPairingsRouteImport.update({
+  id: '/product-pairings',
+  path: '/product-pairings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReturnsRoute = ReturnsRouteImport.update({
+  id: '/returns',
+  path: '/returns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShippingRoute = ShippingRouteImport.update({
+  id: '/shipping',
+  path: '/shipping',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsSlugRoute = ProductsSlugRouteImport.update({
+  id: '/products/$slug',
+  path: '/products/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopBodyButtersRoute = ShopBodyButtersRouteImport.update({
+  id: '/shop_/body-butters',
+  path: '/shop/body-butters',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopBodyOilsRoute = ShopBodyOilsRouteImport.update({
+  id: '/shop_/body-oils',
+  path: '/shop/body-oils',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/product-info': typeof ProductInfoRoute
+  '/product-pairings': typeof ProductPairingsRoute
+  '/returns': typeof ReturnsRoute
+  '/reviews': typeof ReviewsRoute
+  '/shipping': typeof ShippingRoute
+  '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
+  '/products/$slug': typeof ProductsSlugRoute
+  '/shop/body-butters': typeof ShopBodyButtersRoute
+  '/shop/body-oils': typeof ShopBodyOilsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/product-info': typeof ProductInfoRoute
+  '/product-pairings': typeof ProductPairingsRoute
+  '/returns': typeof ReturnsRoute
+  '/reviews': typeof ReviewsRoute
+  '/shipping': typeof ShippingRoute
+  '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
+  '/products/$slug': typeof ProductsSlugRoute
+  '/shop/body-butters': typeof ShopBodyButtersRoute
+  '/shop/body-oils': typeof ShopBodyOilsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
+  '/product-info': typeof ProductInfoRoute
+  '/product-pairings': typeof ProductPairingsRoute
+  '/returns': typeof ReturnsRoute
+  '/reviews': typeof ReviewsRoute
+  '/shipping': typeof ShippingRoute
+  '/shop': typeof ShopRoute
+  '/terms': typeof TermsRoute
+  '/products/$slug': typeof ProductsSlugRoute
+  '/shop_/body-butters': typeof ShopBodyButtersRoute
+  '/shop_/body-oils': typeof ShopBodyOilsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/privacy'
+    | '/product-info'
+    | '/product-pairings'
+    | '/returns'
+    | '/reviews'
+    | '/shipping'
+    | '/shop'
+    | '/terms'
+    | '/products/$slug'
+    | '/shop/body-butters'
+    | '/shop/body-oils'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/privacy'
+    | '/product-info'
+    | '/product-pairings'
+    | '/returns'
+    | '/reviews'
+    | '/shipping'
+    | '/shop'
+    | '/terms'
+    | '/products/$slug'
+    | '/shop/body-butters'
+    | '/shop/body-oils'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/privacy'
+    | '/product-info'
+    | '/product-pairings'
+    | '/returns'
+    | '/reviews'
+    | '/shipping'
+    | '/shop'
+    | '/terms'
+    | '/products/$slug'
+    | '/shop_/body-butters'
+    | '/shop_/body-oils'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ProductInfoRoute: typeof ProductInfoRoute
+  ProductPairingsRoute: typeof ProductPairingsRoute
+  ReturnsRoute: typeof ReturnsRoute
+  ReviewsRoute: typeof ReviewsRoute
+  ShippingRoute: typeof ShippingRoute
+  ShopRoute: typeof ShopRoute
+  TermsRoute: typeof TermsRoute
+  ProductsSlugRoute: typeof ProductsSlugRoute
+  ShopBodyButtersRoute: typeof ShopBodyButtersRoute
+  ShopBodyOilsRoute: typeof ShopBodyOilsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product-info': {
+      id: '/product-info'
+      path: '/product-info'
+      fullPath: '/product-info'
+      preLoaderRoute: typeof ProductInfoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product-pairings': {
+      id: '/product-pairings'
+      path: '/product-pairings'
+      fullPath: '/product-pairings'
+      preLoaderRoute: typeof ProductPairingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/returns': {
+      id: '/returns'
+      path: '/returns'
+      fullPath: '/returns'
+      preLoaderRoute: typeof ReturnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shipping': {
+      id: '/shipping'
+      path: '/shipping'
+      fullPath: '/shipping'
+      preLoaderRoute: typeof ShippingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/$slug': {
+      id: '/products/$slug'
+      path: '/products/$slug'
+      fullPath: '/products/$slug'
+      preLoaderRoute: typeof ProductsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop_/body-butters': {
+      id: '/shop_/body-butters'
+      path: '/shop/body-butters'
+      fullPath: '/shop/body-butters'
+      preLoaderRoute: typeof ShopBodyButtersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop_/body-oils': {
+      id: '/shop_/body-oils'
+      path: '/shop/body-oils'
+      fullPath: '/shop/body-oils'
+      preLoaderRoute: typeof ShopBodyOilsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  PrivacyRoute: PrivacyRoute,
+  ProductInfoRoute: ProductInfoRoute,
+  ProductPairingsRoute: ProductPairingsRoute,
+  ReturnsRoute: ReturnsRoute,
+  ReviewsRoute: ReviewsRoute,
+  ShippingRoute: ShippingRoute,
+  ShopRoute: ShopRoute,
+  TermsRoute: TermsRoute,
+  ProductsSlugRoute: ProductsSlugRoute,
+  ShopBodyButtersRoute: ShopBodyButtersRoute,
+  ShopBodyOilsRoute: ShopBodyOilsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
