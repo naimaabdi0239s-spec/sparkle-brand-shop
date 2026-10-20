@@ -29,12 +29,12 @@ export const butterDescription = 'A rich, hydrating whipped body butter made wit
 export const oilDescription = 'A rose-infused blend of sunflower, almond, and castor oils that deeply nourishes and moisturizes dry, tight skin, leaving it soft and glowing.';
 export const products: Product[] = [
   { slug: 'brown-sugar-vanilla', name: 'Brown Sugar Vanilla', kind: 'butter', image: resolveAsset(brown), scent: 'Sweet, soft brown sugar and cinnamon with a hint of vanilla bean.', prices: [14, 24], ingredients: butterIngredients },
-  { slug: 'mahogany-teakwood', name: 'Mahogany Teakwood', kind: 'butter', image: resolveAsset(teakwood), scent: 'Cedarwood and oakwood blended with warm mahogany for a rich, woodsy scent. Unisex and grounding.', prices: [14, 24], ingredients: butterIngredients },
+  { slug: 'mahogany-teakwood', name: 'Mahogany Teakwood', kind: 'butter', image: resolveAsset(teakwood), scent: 'Cedarwood and oakwood blended with warm mahogany for a rich, woodsy scent. Unisex and uplifting.', prices: [14, 24], ingredients: butterIngredients },
   { slug: 'vanilla-bean', name: 'Vanilla Bean', kind: 'butter', image: resolveAsset(vanilla), scent: 'Creamy, sweet, warm vanilla bean, perfect for any season.', prices: [14, 24], ingredients: butterIngredients },
   { slug: 'unscented', name: 'Unscented', kind: 'butter', image: resolveAsset(unscented), scent: 'No added fragrance. Great for sensitive noses or layering under your favorite perfume.', prices: [14, 24], ingredients: butterIngredients },
-  { slug: 'unscented-oil', name: 'Unscented', kind: 'oil', image: resolveAsset(unscentedOil), scent: 'No added fragrance. Great for sensitive noses or layering under your favorite perfume.', prices: [9, 18], ingredients: 'Sunflower, almond, and castor oils.' },
-  { slug: 'vanilla-bean-oil', name: 'Vanilla Bean', kind: 'oil', image: resolveAsset(vanillaOil), scent: 'Creamy, sweet, warm vanilla bean, perfect for any season.', prices: [9, 18], ingredients: 'Sunflower, almond, and castor oils.' },
-  { slug: 'mahogany-teakwood-oil', name: 'Mahogany Teakwood', kind: 'oil', image: resolveAsset(teakwoodOil), scent: 'Cedarwood and oakwood blended with warm mahogany for a rich, woodsy scent. Unisex and grounding.', prices: [9, 18], ingredients: 'Sunflower, almond, and castor oils.' },
+  { slug: 'unscented-oil', name: 'Unscented', kind: 'oil', image: resolveAsset(unscentedOil), scent: 'No added fragrance. Great for sensitive noses or layering under your favorite perfume.', prices: [9, 18], ingredients: 'Rosehip oil, sunflower oil, sweet almond oil, castor oil, and vitamin E.' },
+  { slug: 'vanilla-bean-oil', name: 'Vanilla Bean', kind: 'oil', image: resolveAsset(vanillaOil), scent: 'Creamy, sweet, warm vanilla bean, perfect for any season.', prices: [9, 18], ingredients: 'Rosehip, sweet almond, grape seed, sunflower, and castor oils.' },
+  { slug: 'mahogany-teakwood-oil', name: 'Mahogany Teakwood', kind: 'oil', image: resolveAsset(teakwoodOil), scent: 'Cedarwood and oakwood blended with warm mahogany for a rich, woodsy scent. Unisex and uplifting.', prices: [9, 18], ingredients: 'Sunflower, sweet almond, castor, and rosehip oils.' },
 ];
 
 export const butters = products.filter(p => p.kind === 'butter');
