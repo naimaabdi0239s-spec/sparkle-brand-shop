@@ -11,3 +11,7 @@
 - [x] Remove the handcrafted footer line.
 - [ ] Shopify Liquid theme transfer: requires a separate Liquid theme conversion; Shopify setup was skipped.
 - [ ] Verify the updated carousel and founder/footer presentation.
+- [ ] Update body oil pairings to the supplied combinations.
+- [ ] Lighten reviews, newsletter and footer with restrained sage accents.
+- [ ] Replace the homepage photograph with the new upload in the same wide, zoomed-out treatment.
+- [ ] Verify the new pairings and updated presentation.
