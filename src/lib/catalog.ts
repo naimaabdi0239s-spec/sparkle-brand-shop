@@ -44,11 +44,11 @@ export const butters = products.filter(p => p.kind === 'butter');
 export const oils = products.filter(p => p.kind === 'oil');
 export const pairings = [
   { oil: 'unscented-oil', image: resolveAsset(unscentedSet), butters: ['brown-sugar-vanilla', 'mahogany-teakwood', 'vanilla-bean', 'unscented'] },
-  { oil: 'vanilla-bean-oil', image: resolveAsset(vanillaSet), butters: ['brown-sugar-vanilla', 'mahogany-teakwood', 'vanilla-bean'] },
-  { oil: 'mahogany-teakwood-oil', image: resolveAsset(teakwoodSet), butters: ['mahogany-teakwood', 'vanilla-bean', 'unscented'] },
+  { oil: 'vanilla-bean-oil', image: resolveAsset(vanillaSet), butters: ['unscented', 'vanilla-bean', 'brown-sugar-vanilla'] },
+  { oil: 'mahogany-teakwood-oil', image: resolveAsset(teakwoodSet), butters: ['unscented', 'mahogany-teakwood'] },
 ];
 
 export const money = (n: number) => `$${n.toFixed(2)}`;
 export function pageHead(title: string, description: string) {
-  return { meta: [{ title: `${title} | A Gabrielle` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | A Gabrielle` }] };
+  return { meta: [{ title: `${title} | A Gabrielle` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | A Gabrielle` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] };
 }
