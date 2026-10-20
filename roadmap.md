@@ -16,4 +16,4 @@
 - [x] Replace the homepage photograph with the new upload in the same wide, zoomed-out treatment.
 - [x] Verify the new pairings and updated presentation.
 - [x] Confirm the recreated reference website retains all requested updates and working shop pages.
-- [ ] Restore hosted preview builds: blocked by Lovable repository-fetch networking, not a failing source file.
+- [x] Confirm preview builds recover: latest build reports build OK.
