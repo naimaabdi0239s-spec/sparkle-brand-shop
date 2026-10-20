@@ -15,3 +15,5 @@
 - [x] Lighten reviews, newsletter and footer with restrained sage accents.
 - [x] Replace the homepage photograph with the new upload in the same wide, zoomed-out treatment.
 - [x] Verify the new pairings and updated presentation.
+- [x] Confirm the recreated reference website retains all requested updates and working shop pages.
+- [x] Confirm preview builds recover: latest build reports build OK.

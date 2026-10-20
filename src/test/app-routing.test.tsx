@@ -14,4 +14,15 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it.each([
+    "/shop", "/shop/body-butters", "/shop/body-oils", "/product-pairings",
+    "/about", "/reviews", "/product-info", "/shipping", "/returns",
+    "/privacy", "/terms", "/contact", "/products/vanilla-bean-oil",
+  ])("matches the completed shop page %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    const matches = router.matchRoutes(path);
+    expect(matches.at(-1)?.routeId).toBeDefined();
+    expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+  });
 });
