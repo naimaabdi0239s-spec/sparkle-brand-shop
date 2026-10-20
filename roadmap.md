@@ -10,4 +10,8 @@
 - [x] Match the founder sign-off typography and bring the closing quote beside AGH.
 - [x] Remove the handcrafted footer line.
 - [ ] Shopify Liquid theme transfer: requires a separate Liquid theme conversion; Shopify setup was skipped.
-- [ ] Verify the updated carousel and founder/footer presentation.
+- [x] Verify the updated carousel and founder/footer presentation.
+- [x] Update body oil pairings to the supplied combinations.
+- [x] Lighten reviews, newsletter and footer with restrained sage accents.
+- [x] Replace the homepage photograph with the new upload in the same wide, zoomed-out treatment.
+- [x] Verify the new pairings and updated presentation.

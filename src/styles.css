@@ -30,3 +30,53 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 .store-bag{position:fixed;inset:0 0 0 auto;width:min(100%,440px);height:100dvh;max-width:440px;overflow-y:auto;display:block;padding:30px;box-shadow:var(--shadow)}.store-bag>h2{margin:0 30px 12px 0;font-family:var(--font-display);font-size:32px;font-weight:400}.store-bag .checkout-note{font-size:12px;margin-top:20px}
+
+/* Botanical accents and a softer transition through the lower page. */
+:root {
+  --sage: oklch(76% .045 145);
+  --forest: oklch(36% .055 145);
+  --forest-hover: oklch(43% .055 145);
+  --reviews-surface: oklch(86% .018 85);
+  --newsletter-surface: oklch(92% .018 85);
+  --footer-surface: oklch(83% .025 135);
+  --lower-ink: oklch(30% .022 65);
+  --lower-muted: oklch(43% .025 65);
+  --lower-border: oklch(55% .025 100 / .3);
+  --field-surface: oklch(94% .013 85);
+  --hero-eyebrow: oklch(34% .055 55);
+}
+.oil-copy .eyebrow, .pairing-section .eyebrow, .founder-story .eyebrow { color: var(--sage); }
+.oil-copy .btn-default { background:var(--sage);color:var(--forest); }
+.oil-copy .btn-default:hover { background:var(--ivory); }
+.dot.active span { background:var(--sage); }
+.text-link:hover, .nav-left a:hover, .nav-right a:hover { color:var(--sage); }
+.hero-content .eyebrow { color:var(--hero-eyebrow);font-weight:600; }
+.reviews-band, .newsletter, .site-footer {
+  --foreground:var(--lower-ink);
+  --muted-foreground:var(--lower-muted);
+  --champagne:var(--forest);
+  --gold:var(--forest);
+  --border:var(--lower-border);
+  --input:var(--lower-border);
+  --primary:var(--forest);
+  --primary-foreground:var(--ivory);
+  color:var(--foreground);
+}
+.reviews-band { background:var(--reviews-surface); }
+.newsletter { background:var(--newsletter-surface); }
+.site-footer { background:var(--footer-surface); }
+.reviews-band .eyebrow, .newsletter .eyebrow { color:var(--forest); }
+.reviews-band .brand-form input, .reviews-band .brand-form textarea { background:var(--field-surface);color:var(--foreground); }
+.reviews-band .btn-default:hover { background:var(--forest-hover);color:var(--ivory); }
+.newsletter h2 { color:var(--lower-ink); }
+.signup-row button { background:var(--forest);color:var(--ivory); }
+.signup-row button:hover { background:var(--forest-hover); }
+.consent-label input { accent-color:var(--forest); }
+.footer-brand img { filter:brightness(.35); }
+.hero-image { object-position:center; }
+@media (min-width:701px) and (max-width:1000px) {
+  .hero-image { min-height:0;aspect-ratio:16/9;object-position:center; }
+  .hero-content { max-width:300px; }
+  .hero h1 { font-size:44px;margin-bottom:16px; }
+  .hero-content>p:not(.eyebrow) { margin-bottom:18px; }
+}
