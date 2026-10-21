@@ -42,3 +42,9 @@
 @media (min-width:701px){.hero-image{object-position:center}}
 @media (max-width:700px){.hero-image{aspect-ratio:1374/1145;max-height:none;object-position:center}}
 .pairing-photo img{object-fit:contain}
+
+
+/* Keep the homepage hero image fully in frame at its natural proportions. */
+.hero-image{aspect-ratio:1374/1145;object-fit:contain;object-position:center;width:100%;height:auto;max-height:none;background:var(--background)}
+@media (min-width:701px) and (max-width:1000px){.hero-image{min-height:0;aspect-ratio:1374/1145;object-fit:contain;object-position:center}}
+@media (max-width:700px){.hero-image{aspect-ratio:1374/1145;object-fit:contain;object-position:center;height:auto;max-height:none}}
