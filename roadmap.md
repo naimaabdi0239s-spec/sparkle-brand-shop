@@ -1,4 +1,5 @@
 # Website updates
+- [ ] Update uploaded homepage and Mahogany pairing photos without distortion, confirm pairing rules, restore cream dot, and check loading.
 - [x] Preserve the original homepage layout and zoom its photo out substantially.
 - [x] Use the uploaded images folder for website imagery.
 - [x] Complete product and secondary pages using the reference site's copy.
