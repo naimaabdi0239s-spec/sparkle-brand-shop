@@ -45,8 +45,18 @@
 
 
 /* Hero image: keep it visible, scaled down, and naturally framed. */
-.hero-image{display:block;position:relative;z-index:0;width:100%;height:clamp(420px,62vw,760px);max-height:none;aspect-ratio:16/9;object-fit:contain;object-position:center;background:var(--background);flex-shrink:0}
-.hero-shade{z-index:1}
+.hero-image {
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: clamp(420px, 62vw, 760px);
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
 .hero-content,.hero-caption{z-index:2}
 @media (min-width:701px) and (max-width:1000px){.hero-image{height:clamp(420px,62vw,680px);min-height:0;aspect-ratio:16/9;object-fit:contain;object-position:center}}
 @media (max-width:700px){.hero-image{width:100%;height:auto;max-height:none;aspect-ratio:1374/1145;object-fit:contain;object-position:center;background:var(--background)}}
