@@ -17,12 +17,10 @@ function Index() {
       <section className="hero">
         <img
           className="hero-image"
-          src={hero.url}
+          src={hero}
            alt="A Gabrielle body oils and whipped body butters among golden sunlight and green botanicals"
           fetchPriority="high"
           loading="eager"
-          width={1374}
-          height={1145}
         />
         <div className="hero-shade"/><div className="hero-content"><p className="eyebrow">A Gabrielle · A little luxury for your skin</p><h1>Meet your new<br/><em>daily ritual.</em></h1><p>A rich, hand-whipped body butter. A nourishing, rose-infused oil. A moment of care your skin will thank you for.</p><Button asChild className="btn btn-default btn-lg"><Link to="/shop">Shop the products <ArrowRight/></Link></Button></div><div className="hero-caption">Made with care. Made for you.</div>
       </section>
