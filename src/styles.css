@@ -33,9 +33,12 @@
 
 /* Dark green accent (#18392B) used sparingly; Site 1 text, CTA and eyebrow styling kept. */
 :root{--forest:#18392B;--reviews-surface:oklch(41.5% .042 61)}
-.dot.active span{background:var(--forest)}
+.dot.active span{background:var(--ivory)}
 .text-link:hover,.nav-left a:hover,.nav-right a:hover{color:var(--forest)}
 .reviews-band{background:var(--reviews-surface)}
 .reviews-band .brand-form input,.reviews-band .brand-form textarea{background:var(--background)}
-.hero-image{object-position:center}
+.hero-image{object-fit:contain;object-position:right center}
 @media (min-width:701px) and (max-width:1000px){.hero-image{min-height:0;aspect-ratio:16/9;object-position:center}.hero-content{max-width:300px}.hero h1{font-size:44px;margin-bottom:16px}}
+@media (min-width:701px){.hero-image{object-position:right center}}
+@media (max-width:700px){.hero-image{aspect-ratio:1374/1145;max-height:none;object-position:center}}
+.pairing-photo img{object-fit:contain}
