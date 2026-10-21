@@ -6,10 +6,10 @@ import teakwood from '@/assets/teakwood-butter.asset.json';
 import vanilla from '@/assets/vanilla-butter.asset.json';
 import unscented from '@/assets/unscented-butter.asset.json';
 import unscentedOil from '@/assets/unscented-oil.asset.json';
-import vanillaOil from '@/assets/vanilla-oil.asset.json';
+import vanillaOil from '@/assets/vanilla-bean-spa.webp.asset.json';
 import teakwoodOil from '@/assets/teakwood-oil.asset.json';
 import unscentedSet from '@/assets/unscented-set.asset.json';
-import vanillaSet from '@/assets/vanilla-set.asset.json';
+import vanillaSet from '@/assets/vanilla-bean-spa.webp.asset.json';
 import teakwoodSet from '@/assets/mahogany-pairing.webp.asset.json';
 
 function resolveAsset(a: { url?: string } | string | undefined): string {
