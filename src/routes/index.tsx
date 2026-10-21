@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButterSection, OilSection, PairingsSection, StorySection, ReviewsSection, Newsletter } from "@/components/store-sections";
 import { pageHead } from "@/lib/catalog";
-import hero from "@/assets/golden-home.webp.asset.json";
+import hero from "@/assets/Sunlit Gabrielle Essentials Collection.png";
 
 export const Route = createFileRoute("/")({
   head: () => pageHead("Meet your new daily ritual", "Hand-whipped body butters and rose-infused body oils, handcrafted by A Gabrielle."),
