@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { pairings } from '@/lib/catalog';
 
 describe('Body oil pairings', () => {
-  it('pairs Vanilla Bean with Unscented, Vanilla Bean and Brown Sugar Vanilla', () => {
-    expect(pairings.find(pair => pair.oil === 'vanilla-bean-oil')?.butters).toEqual(['unscented', 'vanilla-bean', 'brown-sugar-vanilla']);
+  it('pairs Vanilla Bean only with Brown Sugar Vanilla and Vanilla Bean', () => {
+    expect(pairings.find(pair => pair.oil === 'vanilla-bean-oil')?.butters).toEqual(['brown-sugar-vanilla', 'vanilla-bean']);
   });
   it('pairs Mahogany Teakwood only with Unscented and Mahogany Teakwood', () => {
     expect(pairings.find(pair => pair.oil === 'mahogany-teakwood-oil')?.butters).toEqual(['unscented', 'mahogany-teakwood']);
