@@ -60,3 +60,50 @@
 .hero-content,.hero-caption{z-index:2}
 @media (min-width:701px) and (max-width:1000px){.hero-image{height:clamp(420px,62vw,680px);min-height:0;aspect-ratio:16/9;object-fit:contain;object-position:center}}
 @media (max-width:700px){.hero-image{width:100%;height:auto;max-height:none;aspect-ratio:1374/1145;object-fit:contain;object-position:center;background:var(--background)}}
+
+/* Refinement pass: consistent type scale, spacing, cards, signup and popup. */
+:root{--brand-brown:#69533F}
+body{font-size:16px;line-height:1.6}
+h1{font-size:clamp(34px,4.6vw,60px);line-height:1.1}
+h2{font-size:clamp(26px,3vw,38px);line-height:1.15}
+.section{max-width:1280px;padding:clamp(48px,7vw,92px) clamp(20px,4.5vw,60px)}
+.section-heading{margin-bottom:clamp(16px,2.5vw,32px)}
+.section-heading>p,.page-intro{font-size:16px;max-width:62ch}
+.eyebrow{font-size:12px;letter-spacing:.08em}
+.quiet-label,.text-link{font-size:12px;letter-spacing:.05em}
+.nav-left a,.nav-right a{font-size:14px;font-weight:500;letter-spacing:.04em}
+.nav-inner{height:88px}
+.btn{height:46px;font-size:15px;padding:0 22px}.btn-lg{height:48px}.btn-icon{width:44px;height:44px}
+.announcement{height:38px}.announcement span span{font-size:13px;letter-spacing:.08em}
+.announcement:hover>div{animation-play-state:paused}
+.hero h1{font-size:clamp(34px,4.6vw,62px);max-width:14ch}
+.hero-content>p{font-size:clamp(16px,1.3vw,18px);max-width:46ch}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:24px}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+@media(max-width:1100px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:360px){.product-grid{grid-template-columns:1fr}}
+.product-grid.pairing-count-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px}
+.product-photo{aspect-ratio:4/5;overflow:hidden}.product-photo img{height:100%;object-fit:cover}
+.product-name{gap:8px}.product-name h3{font-size:clamp(17px,1.5vw,21px)}.product-name span{font-size:17px;font-weight:500}
+.product-kind,.product-description{font-size:15px}
+.detail-copy h1{font-size:clamp(28px,3vw,40px)}.detail-price{font-size:20px}
+.detail-copy p,.detail-copy details{font-size:16px;line-height:1.65}
+.founder-story blockquote p{font-size:clamp(16px,1.2vw,18px);line-height:1.6;max-width:640px}
+.policy-page{max-width:760px}.policy-page h1{font-size:clamp(28px,3vw,36px)}.policy-page h2{font-size:clamp(18px,1.6vw,22px)}.policy-page p{font-size:16px}
+.site-footer,.site-footer a{font-size:15px}
+.newsletter h2{font-size:clamp(26px,3vw,38px)}
+.newsletter-body{font-size:16px;margin:14px 0 0;max-width:46ch}
+.signup-row{display:flex;gap:12px;flex-wrap:wrap}
+.signup-row input{flex:1 1 220px;height:50px;padding:0 16px;border:1px solid currentColor;border-radius:3px;background:transparent;color:inherit;font-size:16px}
+.signup-row .btn{height:50px;text-transform:uppercase;letter-spacing:.06em}
+.signup-error{margin:10px 0 0;font-size:15px;font-weight:500}
+.signup-success{font-size:16px;margin:0}
+.newsletter-note{font-size:14px;margin-top:12px}
+.limited-edition{text-align:center;max-width:760px}.limited-edition h2{text-transform:uppercase;letter-spacing:.04em}.limited-edition p{font-size:16px;margin-bottom:24px}
+.relaunch-popup{max-width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow-y:auto;background:var(--ivory);color:var(--chocolate);padding:clamp(24px,4vw,40px);border-radius:4px}
+.relaunch-popup h2{color:var(--chocolate);font-family:var(--font-display);font-size:clamp(30px,4vw,40px);font-weight:400;line-height:1.1;margin:0}
+.relaunch-popup .eyebrow{color:var(--brand-brown);margin:0}
+.relaunch-popup .btn-default{background:var(--brand-brown);color:var(--ivory)}
+.popup-dismiss{background:none;border:0;color:var(--chocolate);text-decoration:underline;font-size:14px;cursor:pointer;justify-self:center;min-height:44px}
+@media(max-width:700px){.signup-row{flex-direction:column}.signup-row .btn{width:100%}.announcement{height:34px}.announcement span span{font-size:11px}.add-row .btn-default{flex:1}}
