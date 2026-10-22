@@ -118,3 +118,98 @@ export const productInfo: Policy = {
     },
   ],
 };
+
+
+export const privacy: Policy = {
+  title: "Privacy Policy",
+  description: "How A Gabrielle handles information shared when you browse or place an order.",
+  sections: [
+    {
+      heading: "Information you provide",
+      paragraphs: [
+        "When you place an order, contact us, or sign up for updates, you may provide information such as your name, email address, shipping address, and order details.",
+        "Payment details are handled by the checkout payment provider. Do not send payment card details to us by email.",
+      ],
+    },
+    {
+      heading: "How information is used",
+      paragraphs: [
+        "Information you provide may be used to process and deliver orders, communicate about purchases or inquiries, provide customer support, and send updates you have requested.",
+      ],
+    },
+    {
+      heading: "Sharing and service providers",
+      paragraphs: [
+        "Information may be shared with service providers where reasonably needed to operate the store, process payments, deliver orders, or provide customer support. We do not describe any third-party provider's practices here; please review the policies shown by those providers when using their services.",
+      ],
+    },
+    {
+      heading: "Cookies and site technology",
+      paragraphs: [
+        "The website and services that support it may use cookies or similar technologies for site functionality, checkout, and performance. Available controls may depend on your browser and the services in use.",
+      ],
+    },
+    {
+      heading: "Data security and retention",
+      paragraphs: [
+        "Reasonable steps are taken to handle information appropriately, but no method of online transmission or electronic storage can be guaranteed to be completely secure. Information may be retained as needed for orders, support, and applicable legal or business requirements.",
+      ],
+    },
+    {
+      heading: "Your choices and contact",
+      paragraphs: [
+        "You may contact us with questions about personal information or to request assistance with your information. Contact info@agabrielle.co.",
+      ],
+    },
+  ],
+};
+
+export const terms: Policy = {
+  title: "Terms & Conditions",
+  description: "Terms for using the A Gabrielle website and purchasing products.",
+  sections: [
+    {
+      heading: "Using this website",
+      paragraphs: [
+        "By using this website, you agree to use it lawfully and not to interfere with its operation, security, or other visitors' use of the site.",
+      ],
+    },
+    {
+      heading: "Product information",
+      paragraphs: [
+        "We make reasonable efforts to present product descriptions, images, ingredients, and prices accurately. Colors and appearance may vary by screen, and product details or availability may change.",
+        "Please review the Product Information & Care page and ingredient list before purchasing. If you have allergies or concerns about an ingredient, contact a qualified healthcare professional before use.",
+      ],
+    },
+    {
+      heading: "Orders and payment",
+      paragraphs: [
+        "Submitting an order is a request to purchase the selected items. Orders are subject to acceptance, availability, successful payment, and correction of pricing or listing errors. The checkout will display applicable charges before you complete your purchase.",
+      ],
+    },
+    {
+      heading: "Shipping and returns",
+      paragraphs: [
+        "Processing, delivery, and shipping details are described in our Shipping Policy. Returns and exchanges are described in our Return & Exchange Policy. Please review those policies before placing an order.",
+      ],
+    },
+    {
+      heading: "Product use and safety",
+      paragraphs: [
+        "Products are intended for external use only. Review ingredient and care information, perform a patch test before first use, and discontinue use if irritation occurs. Keep products away from children and avoid contact with eyes.",
+      ],
+    },
+    {
+      heading: "Website content",
+      paragraphs: [
+        "Website text, branding, photographs, and other content are provided for the store's use and may not be copied or reused commercially without permission, except where permitted by law.",
+      ],
+    },
+    {
+      heading: "Changes and contact",
+      paragraphs: [
+        "These terms may be updated as the store or its practices change. Continued use of the website after changes are posted means you should review the updated terms. For questions, contact info@agabrielle.co.",
+      ],
+    },
+  ],
+};
