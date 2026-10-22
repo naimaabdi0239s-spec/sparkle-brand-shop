@@ -11,7 +11,7 @@ import {
   Newsletter,
 } from "@/components/store-sections";
 import { pageHead } from "@/lib/catalog";
-import hero from "@/assets/ag-golden-hero-wide.jpg";
+import hero from "@/assets/Golden Botanical Skincare Still Life (1).png";
 
 export const Route = createFileRoute("/")({
   head: () =>
