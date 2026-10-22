@@ -11,7 +11,7 @@ import {
   Newsletter,
 } from "@/components/store-sections";
 import { pageHead } from "@/lib/catalog";
-import hero from "@/assets/hero-optimized.webp";
+import hero from "@/assets/ag-golden-hero-wide.jpg";
 
 export const Route = createFileRoute("/")({
   head: () =>
