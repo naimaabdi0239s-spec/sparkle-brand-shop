@@ -107,3 +107,10 @@ h2{font-size:clamp(26px,3vw,38px);line-height:1.15}
 .relaunch-popup .btn-default{background:var(--brand-brown);color:var(--ivory)}
 .popup-dismiss{background:none;border:0;color:var(--chocolate);text-decoration:underline;font-size:14px;cursor:pointer;justify-self:center;min-height:44px}
 @media(max-width:700px){.signup-row{flex-direction:column}.signup-row .btn{width:100%}.announcement{height:34px}.announcement span span{font-size:11px}.add-row .btn-default{flex:1}}
+@media(max-width:700px){.signup-row input{flex:none;width:100%}}
+.relaunch-popup [id$="-description"],.relaunch-popup p:not(.eyebrow):not(.signup-error){color:var(--chocolate)}
+.hero h1{font-size:clamp(34px,4.2vw,56px);max-width:11ch}
+.hero-content>p{max-width:40ch}
+.hero-content .btn{font-size:15px;height:48px}
+.hero-secondary{font-size:13px;color:var(--ivory)}
+.product-photo{background:var(--card)}.product-photo img{object-fit:contain}
