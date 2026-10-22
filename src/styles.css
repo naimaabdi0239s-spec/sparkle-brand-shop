@@ -159,3 +159,9 @@ h2{font-size:clamp(26px,3vw,38px);line-height:1.15}
   margin: 10px 0 0;
   line-height: 1.7;
 }
+
+
+/* Larger header logo — desktop, tablet, and mobile. */
+@media (min-width:1001px){.nav-inner{grid-template-columns:1fr minmax(300px,360px) 1fr}.nav-inner .brand{width:320px;max-width:320px}.nav-inner .brand img{max-height:120px}}
+@media (min-width:701px) and (max-width:1000px){.nav-inner{grid-template-columns:1fr 280px 1fr}.nav-inner .brand{width:280px;max-width:280px}.nav-inner .brand img{max-height:105px}}
+@media (max-width:700px){.nav-inner{grid-template-columns:minmax(0,1fr) minmax(0,230px) minmax(0,1fr)}.nav-inner .brand{width:230px;max-width:230px}.nav-inner .brand img{max-height:92px}}
