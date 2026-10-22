@@ -174,7 +174,7 @@ export const pairings = [
   },
   {
     oil: "vanilla-bean-oil",
-    image: resolveAsset(vanillaSet),
+    image: vanillaSet,
     butters: ["brown-sugar-vanilla", "vanilla-bean"],
   },
   {
