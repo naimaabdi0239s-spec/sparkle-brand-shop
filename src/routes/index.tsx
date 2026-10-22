@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ButterSection, OilSection, PairingsSection, StorySection, ReviewsSection, Newsletter } from "@/components/store-sections";
+import { ButterSection, OilSection, PairingsSection, StorySection, ReviewsSection, Newsletter, LimitedEdition } from "@/components/store-sections";
 import { pageHead } from "@/lib/catalog";
 import hero from "@/assets/Golden Botanical Skincare Still Life (1).png";
 
 export const Route = createFileRoute("/")({
-  head: () => pageHead("Meet your new daily ritual", "Hand-whipped body butters and rose-infused body oils, handcrafted by A Gabrielle."),
+  head: () => pageHead("Your everyday ritual for a softer glow", "Hand-whipped body butters and rose-infused body oils, handcrafted by A Gabrielle."),
   component: Index,
 });
 
@@ -22,7 +22,7 @@ function Index() {
           fetchPriority="high"
           loading="eager"
         />
-        <div className="hero-shade"/><div className="hero-content"><p className="eyebrow">A Gabrielle · A little luxury for your skin</p><h1>Meet your new<br/><em>daily ritual.</em></h1><p>A rich, hand-whipped body butter. A nourishing, rose-infused oil. A moment of care your skin will thank you for.</p><Button asChild className="btn btn-default btn-lg"><Link to="/shop">Shop the products <ArrowRight/></Link></Button></div><div className="hero-caption">Made with care. Made for you.</div>
+        <div className="hero-shade"/><div className="hero-content"><p className="eyebrow">A Gabrielle · A little luxury for your skin</p><h1>Your Everyday Ritual for a Softer, <em>More Radiant Glow.</em></h1><p>Handcrafted body butters and body oils made to bring a little more care, comfort, and glow to your everyday routine.</p><div className="hero-actions"><Button asChild className="btn btn-default btn-lg"><Link to="/shop">Shop the Collection <ArrowRight/></Link></Button><Link to="/about" className="text-link hero-secondary">Discover Our Story</Link></div></div><div className="hero-caption">Made with care. Made for you.</div>
       </section>
 
       <ButterSection />
@@ -30,6 +30,7 @@ function Index() {
       <PairingsSection />
       <StorySection />
       <ReviewsSection />
+      <LimitedEdition />
       <Newsletter />
     </main>
   );

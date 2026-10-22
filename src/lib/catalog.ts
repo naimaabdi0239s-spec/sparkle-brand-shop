@@ -41,7 +41,7 @@ export const butters = products.filter(p => p.kind === 'butter');
 export const oils = products.filter(p => p.kind === 'oil');
 export const pairings = [
   { oil: 'unscented-oil', image: resolveAsset(unscentedSet), butters: ['brown-sugar-vanilla', 'mahogany-teakwood', 'vanilla-bean', 'unscented'] },
-  { oil: 'vanilla-bean-oil', image: resolveAsset(vanillaSet), butters: ['unscented', 'vanilla-bean', 'brown-sugar-vanilla'] },
+  { oil: 'vanilla-bean-oil', image: resolveAsset(vanillaSet), butters: ['brown-sugar-vanilla', 'vanilla-bean'] },
   { oil: 'mahogany-teakwood-oil', image: resolveAsset(teakwoodSet), butters: ['unscented', 'mahogany-teakwood'] },
 ];
 
