@@ -1,6 +1,6 @@
 import {createContext,useContext,useState,type ReactNode} from 'react';
 import {Link} from '@tanstack/react-router';
-import {Menu,ShoppingBag,X,Plus,Minus,Instagram,ArrowUpRight} from 'lucide-react';
+import {Menu,ShoppingBag,X,Plus,Minus,Instagram,Facebook,ArrowUpRight} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {images,money,type Product} from '@/lib/catalog';
 import {Dialog,DialogContent,DialogTitle} from '@/components/ui/dialog';
@@ -8,7 +8,29 @@ import {RelaunchPopup} from '@/components/relaunch-popup';
 type Line={product:Product;size:number;quantity:number};
 const BagContext=createContext<{add:(p:Product,s:number,q:number)=>void}>({add:()=>{}});
 export const useBag=()=>useContext(BagContext);
-export function SocialLinks(){return <div className="social-links"><a href="https://www.instagram.com/agabrielle.co" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram/>Instagram</a><a href="https://www.facebook.com/share/1ZTY6rBUWz/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.tiktok.com/@a.gabrielleskin" target="_blank" rel="noopener noreferrer">TikTok</a></div>}
+function TikTokIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ display: "inline-block", flexShrink: 0 }}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.27 6.27 0 0 0 1.86-4.49V8.52a8.27 8.27 0 0 0 4.84 1.56V6.69h-.93z"/>
+    </svg>
+  );
+}
+
+export function SocialLinks() {
+  return (
+    <div className="social-links">
+      <a href="https://www.instagram.com/agabrielle.co" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <Instagram size={15} /> <span>Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/share/1ZTY6rBUWz/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <Facebook size={15} /> <span>Facebook</span>
+      </a>
+      <a href="https://www.tiktok.com/@a.gabrielleskin" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <TikTokIcon size={15} /> <span>TikTok</span>
+      </a>
+    </div>
+  );
+}
 export function StoreShell({children}:{children:ReactNode}){
  const [mobile,setMobile]=useState(false);const [open,setOpen]=useState(false);const [lines,setLines]=useState<Line[]>([]);
  function add(product:Product,size:number,quantity:number){setLines(old=>{const match=old.find(l=>l.product.slug===product.slug&&l.size===size);return match?old.map(l=>l===match?{...l,quantity:l.quantity+quantity}:l):[...old,{product,size,quantity}]});setOpen(true)}
