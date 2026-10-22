@@ -169,3 +169,7 @@ h2{font-size:clamp(26px,3vw,38px);line-height:1.15}
 
 /* Raise the header logo slightly without changing its size. */
 .nav-inner .brand{transform:translateY(-6px)}
+
+
+/* Nudge header logo further upward. */
+.nav-inner .brand{transform:translateY(-12px)}
