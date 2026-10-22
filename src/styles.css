@@ -114,3 +114,6 @@ h2{font-size:clamp(26px,3vw,38px);line-height:1.15}
 .hero-content .btn{font-size:15px;height:48px}
 .hero-secondary{font-size:13px;color:var(--ivory)}
 .product-photo{background:var(--card)}.product-photo img{object-fit:contain}
+.product-photo{aspect-ratio:3/2}.product-photo img{object-fit:cover}
+.hero h1{max-width:13ch}
+.signup-row button{font-size:14px;border-radius:3px}

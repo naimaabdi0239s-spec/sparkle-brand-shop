@@ -19,3 +19,5 @@
 - [x] Verify the new pairings and updated presentation.
 - [x] Confirm the recreated reference website retains all requested updates and working shop pages.
 - [x] Confirm preview builds recover: latest build reports build OK.
+- [x] Improvement brief: type/spacing scale, 20% relaunch marquee + popup, saved email signups, limited-edition section, new hero copy, document pairings (Vanilla Bean oil → Brown Sugar Vanilla + Vanilla Bean)
+- [ ] Real 20% discount at checkout (needs Shopify/payment setup)
